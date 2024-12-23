@@ -6,8 +6,8 @@ const AuthRight = () => {
     const [isSaas, setIsSaas] = useState(true);
     const navigate = useNavigate();
 
-    const handleNavigation = ({path}) => {
-        navigate(path);
+    const handleNavigation = () => {
+        navigate('/dashboard');
     };
 
     return (
@@ -52,7 +52,7 @@ const AuthRight = () => {
                                     (provider) => (
                                         <button
                                             key={provider}
-                                            onClick={() => handleNavigation("/dashboard")}
+                                            onClick={() => handleNavigation()}
                                             className="border flex items-center w-full gap-3 p-2 rounded-xl justify-center"
                                         >
                                             <img
@@ -68,14 +68,14 @@ const AuthRight = () => {
                         ) : (
                             <div className="flex flex-col items-center justify-center w-full gap-2 max-w-[400px]">
                                 <button
-                                    onClick={() => handleNavigation("/dashboard")}
+                                    onClick={() => handleNavigation()}
                                     className="border flex items-center w-full gap-3 p-2 rounded-xl justify-center"
                                 >
                                     <img src="/svg/gitlab.svg" alt="gitlab" className="w-5" />
                                     Sign in with GitLab
                                 </button>
                                 <button
-                                    onClick={() => handleNavigation("/dashboard")}
+                                    onClick={() => handleNavigation()}
                                     className="border flex items-center w-full gap-3 p-2 rounded-xl justify-center"
                                 >
                                     <KeyIcon className="w-5" />
