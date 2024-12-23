@@ -3,7 +3,7 @@ import Home from "./Pages/Home.tsx";
 import Auth from "./Pages/Auth.tsx";
 
 function App() {
-
+  
   return (
     <BrowserRouter>
      <div className={`flex min-h-screen w-full bg-[#FAFAFA]`}>
